@@ -1,5 +1,5 @@
 # ai-driven-e2e-automation
-ai-driven-e2e-automation
+An AI driven e2e automation solution.
 
 ## Local
 
@@ -63,13 +63,13 @@ python runner.py - generate_report - open_report
 
 python runner.py - run - generate_report - open_report
 
-python runner.py - run --keyword=test_multi_browser
+python runner.py - run --keyword=test_baidu
 
 python runner.py - run --mark=P0
 
-python runner.py - run --keyword=test_multi_browser --mark=P0
+python runner.py - run --keyword=test_baidu --mark=P0
 
-python runner.py - run --case_files=tests\feature_a\test_multi_browser.py
+python runner.py - run --case_files=tests\test_baidu_demo.py
 
 python runner.py - run --last_failed=True
 
@@ -79,7 +79,7 @@ python runner.py - run --maxfail=2
 
 python runner.py - run --failed_first=True
 
-python runner.py - run --ignore=tests\feature_a\test_multi_browser.py
+python runner.py - run --ignore=tests\test_baidu_demo.py
 
-python runner.py - run --keyword=test_multi_browser --mark=P0 - generate_report - open_report
+python runner.py - run --keyword=test_baidu --mark=P0 - generate_report - open_report
 ```
