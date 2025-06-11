@@ -78,6 +78,10 @@ class BasePage:
         self.driver.save_screenshot(file_path)
 
     @allure_step
+    def get_screenshot_as_base64(self):
+        return self.driver.get_screenshot_as_base64()
+
+    @allure_step
     def click(self, by, value):
         """点击元素"""
         self.find_element(by, value).click()

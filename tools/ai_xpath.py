@@ -6,25 +6,21 @@ from tools.ai_core import AICore
 class AIXpath:
 
     @staticmethod
-    def get_xpath(screenshot_path, xpath_data, element_clue):
-        messages = []
-        with open(screenshot_path, 'rb') as image_file:
-            encoded_string = base64.b64encode(image_file.read()).decode()
-        messages.append({
+    def get_xpath(screenshot_data, xpath_data, element_clue):
+        messages = [{
             "role": "user",
             "content": [
-                {"type": "image", "image": encoded_string},
+                {"type": "image", "image": screenshot_data},
             ]
-        })
-
-        messages.append({
+        }, {
             "role": "user",
             "content": [
                 {"type": "text", "text": xpath_data},
                 {"type": "text",
                  "text": f"你是一个专业的设计师和测试工程师，根据提供的数据，'{element_clue}'最有可能是哪个 xpath，仅直接提供 xpath 结果。禁止附带任何其他文本或文本格式。做得好有奖励！"},
             ]
-        })
+        }]
+
         return AICore().ask_ai(messages)
 
 
