@@ -8,6 +8,7 @@ from tools.jsonpath_util import JSONPathUtil
 from tools.random_util import RandomUtil
 from tools.time_util import TimeUtil
 from tools.xpath_util import XpathUtil
+from tools.text_similarity_util import TextSimilarityUtil
 
 
 class Utils:
@@ -21,3 +22,4 @@ class Utils:
     ai_core = AICore
     ai_xpath = AIXpath
     xpath_util = XpathUtil
+    text_similarity_util = TextSimilarityUtil
